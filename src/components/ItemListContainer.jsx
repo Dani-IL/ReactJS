@@ -1,19 +1,17 @@
 import { Component } from "react";
+import TitleComponent from "./Title";
 
 class ItemList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categoria: "Ropa de ",
+      categoria: "Hombre",
     };
   }
   render() {
     return (
       <div>
-        <h1>
-          {this.state.categoria}
-          {this.props.sexo}
-        </h1>
+        <TitleComponent name={this.state.categoria} />
       </div>
     );
   }
