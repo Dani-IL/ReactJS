@@ -1,5 +1,6 @@
 import { Component } from "react";
 import TitleComponent from "./Title";
+import ItemCount from "./ItemCount";
 
 class ItemList extends Component {
   constructor(props) {
@@ -8,10 +9,12 @@ class ItemList extends Component {
       categoria: "Hombre",
     };
   }
+
   render() {
     return (
       <div>
         <TitleComponent name={this.state.categoria} />
+        <ItemCount />
       </div>
     );
   }
