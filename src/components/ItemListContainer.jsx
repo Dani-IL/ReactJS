@@ -14,7 +14,7 @@ class ItemList extends Component {
     return (
       <div>
         <TitleComponent name={this.state.categoria} />
-        <ItemCount />
+        <ItemCount stock={5} initial={1} />
       </div>
     );
   }
