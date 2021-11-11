@@ -4,12 +4,12 @@ import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { IconButton } from "@mui/material";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stockActual, initial, onCartClick }) => {
   const [count, setCount] = useState(initial);
 
   const Aumentar = () => {
     const newValue = count + 1;
-    if (newValue <= stock) {
+    if (newValue <= stockActual) {
       setCount(newValue);
     }
   };
@@ -20,14 +20,10 @@ const ItemCount = ({ stock, initial }) => {
     }
   };
 
-  const onAdd = () => {
-    const msg = `Agregaste ${count} producto`;
-    count === 1 ? alert(msg) : alert(`${msg}s`);
-  };
-
   return (
     <>
       <h2>Contador de Items</h2>
+      <h3>Stock Actual: {stockActual}</h3>
       <h3>Cantidad Seleccionada: {count}</h3>
       <button onClick={Aumentar}>
         <IconButton fontSize="large" color="primary">
@@ -43,7 +39,12 @@ const ItemCount = ({ stock, initial }) => {
       <span> </span>
       <br></br>
       <br></br>
-      <button onClick={onAdd}>
+      <button
+        onClick={() => {
+          onCartClick(count);
+          setCount(initial);
+        }}
+      >
         <IconButton fontSize="large" color="primary">
           <AddShoppingCartIcon />
         </IconButton>

@@ -1,23 +1,26 @@
-import { Component } from "react";
 import TitleComponent from "./Title";
 import ItemCount from "./ItemCount";
+import React, { useState } from "react";
 
-class ItemList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      categoria: "Hombre",
-    };
-  }
+const ItemList = (props) => {
+  const [stock, setStock] = useState(5);
 
-  render() {
-    return (
-      <div>
-        <TitleComponent name={this.state.categoria} />
-        <ItemCount stock={5} initial={1} />
-      </div>
-    );
-  }
-}
+  const onAdd = (newCount) => {
+    if (newCount <= stock) {
+      const msg = `Agregaste ${newCount} producto`;
+      newCount === 1 ? alert(msg) : alert(`${msg}s`);
+      setStock(stock - newCount);
+    } else {
+      alert("Cantidad supera el Stock");
+    }
+  };
+
+  return (
+    <div>
+      <TitleComponent name={props.categoria} />
+      <ItemCount stockActual={stock} initial={1} onCartClick={onAdd} />
+    </div>
+  );
+};
 
 export default ItemList;
