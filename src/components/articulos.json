@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "img": "/img/buzo.jpg",
+      "title": "Buzo",
+      "descripcion": "Buzo frizado manga larga. Colores varios.",
+      "precio": "2000",
+      "stock": "3"
+    },
+    {
+      "id": 2,
+      "img": "/img/camisa.jpg",
+      "title": "Camisa",
+      "descripcion": "Camisa manga larga. Colores varios.",
+      "precio": "800",
+      "stock": "5"
+    },
+    {
+      "id": 3,
+      "img": "/img/chomba.jpg",
+      "title": "Chomba",
+      "descripcion": "Chomba de verano. Colores varios.",
+      "precio": "500",
+      "stock": "12"
+    },
+    {
+      "id": 4,
+      "img": "/img/pantalon.jpg",
+      "title": "Pantalon",
+      "descripcion": "Pantalon de vestir. Colores varios.",
+      "precio": "2800",
+      "stock": "6"
+    },
+    {
+      "id": 5,
+      "img": "/img/remera.jpg",
+      "title": "Remera",
+      "descripcion": "Remera de algodon. Colores varios.",
+      "precio": "500",
+      "stock": "10"
+    },
+    {
+      "id": 6,
+      "img": "/img/sweater.jpg",
+      "title": "Sweater",
+      "descripcion": "Sweater manga larga. Colores varios.",
+      "precio": "4000",
+      "stock": "4"
+    }
+  ]

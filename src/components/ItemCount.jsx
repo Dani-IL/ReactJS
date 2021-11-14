@@ -49,6 +49,8 @@ const ItemCount = ({ stockActual, initial, onCartClick }) => {
           <AddShoppingCartIcon />
         </IconButton>
       </button>
+      <br></br>
+      <br></br>
     </>
   );
 };

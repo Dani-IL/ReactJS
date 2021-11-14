@@ -1,0 +1,16 @@
+.articulos {
+  display: grid;
+  display: inline-block;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 5% 10% 5% 5%;
+  grid-column-gap: 20px;
+  grid-row-gap: 2px;
+  justify-items: center;
+  align-items: stretch;
+  box-sizing: content-box;
+  width: 25%;
+  border: solid #5b6dcd 2px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3%;
+}
